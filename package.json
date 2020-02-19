@@ -1,0 +1,12 @@
+{
+  "name": "sampleyarn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/ayem22/sampleyarn.git",
+  "author": "ayem22 <ayemelyanenko@chegg.com>",
+  "license": "MIT",
+  "dependencies": {
+    "testcafe": "^1.8.2",
+    "testcafe-browser-provider-browserstack": "^1.12.0"
+  }
+}
