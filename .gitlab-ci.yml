@@ -1,6 +1,4 @@
 image: node:latest
-
-test:
   
   variables:
       BROWSERSTACK_USE_AUTOMATE: "1"
