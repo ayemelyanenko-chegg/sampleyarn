@@ -1,0 +1,16 @@
+image: node:latest
+
+e2e_tests:
+  
+  variables:
+      BROWSERSTACK_USE_AUTOMATE: "1"
+      BROWSERSTACK_USERNAME: "ayemelyanenko1"
+      BROWSERSTACK_ACCESS_KEY: "ADXbZBpxzvNepuUzg9mz"
+      BROWSERSTACK_DISPLAY_RESOLUTION: "1600x1200"
+      BROWSERSTACK_DEBUG: "true"
+  
+  before_script:
+    - yarn install --frozen-lockfile
+  
+  script:
+    - yarn testcafe "browserstack:chrome:OS X Catalina" ./tests/sampleTest.js -e -q
