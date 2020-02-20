@@ -12,10 +12,6 @@ e2e_tests:
   before_script:
     - yarn install --frozen-lockfile
   
-job1:
-    script:
+  script:
     - yarn testcafe "browserstack:chrome:OS X Catalina" ./tests/sampleTest.js -e -q
-
-job2:
-    script:
     - yarn testcafe "browserstack:firefox:OS X Catalina" ./tests/sampleTest.js -e -q
