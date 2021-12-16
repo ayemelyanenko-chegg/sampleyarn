@@ -1,16 +1,19 @@
-image: node:latest
-
-e2e_tests:
-  
-  variables:
-      BROWSERSTACK_USE_AUTOMATE: "1"
-      BROWSERSTACK_USERNAME: "ayemelyanenko1"
-      BROWSERSTACK_ACCESS_KEY: "ADXbZBpxzvNepuUzg9mz"
-      BROWSERSTACK_DISPLAY_RESOLUTION: "1600x1200"
-      BROWSERSTACK_DEBUG: "true"
-  
+testcafe_tests:
+  stage: test
+  image: centos
   before_script:
-    - yarn install --frozen-lockfile
-  
+    - dnf -y install wget zip jq
+    - dnf -y module install nodejs:12
+    - npm install -g yarn
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    - wget -O FirefoxSetup.exe "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
+    - dnf -y install google-chrome-stable_current_x86_64.rpm
+    - dnf -y install FirefoxSetup.exe
   script:
-    - yarn concurrently "testcafe 'browserstack:chrome:OS X Catalina' ./tests/sampleTest.js -e -q" "testcafe 'browserstack:firefox:OS X Catalina' ./tests/sampleTest.js -e -q"
+    - yarn install
+    - yarn testcafe firefox:headless tests/sampleTest.js -e
+  artifacts:
+    paths:
+      - tests/results
+    reports:
+      junit: tests/results/report.xml
