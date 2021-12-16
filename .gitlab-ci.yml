@@ -6,6 +6,7 @@ testcafe_tests:
     - dnf -y module install nodejs:12
     - npm install -g yarn
     - yum -y install firefox 
+    - yum -y update firefox
   script:
     - yarn install
     - yarn testcafe firefox:headless tests/sampleTest.js -e
