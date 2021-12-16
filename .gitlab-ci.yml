@@ -6,9 +6,10 @@ testcafe_tests:
     - dnf -y module install nodejs:12
     - npm install -g yarn
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-    - wget -O FirefoxSetup.exe "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
     - dnf -y install google-chrome-stable_current_x86_64.rpm
-    - dnf -y install FirefoxSetup.exe
+    - wget -O- "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" | tar -jx -C /usr/local/
+    - echo "exclude=firefox" >> /etc/dnf/dnf.conf
+    - ln -s /usr/local/firefox/firefox /usr/bin/firefox
   script:
     - yarn install
     - yarn testcafe firefox:headless tests/sampleTest.js -e
