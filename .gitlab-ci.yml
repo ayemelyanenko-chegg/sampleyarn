@@ -5,6 +5,7 @@ testcafe_tests:
     - dnf -y install wget zip jq
     - dnf -y module install nodejs:12
     - npm install -g yarn
+    - yum -y install epel-release 
     - yum -y install firefox 
     - yum -y update firefox
   script:
