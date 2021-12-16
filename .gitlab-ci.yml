@@ -5,10 +5,10 @@ testcafe_tests:
     - dnf -y install wget zip jq
     - dnf -y module install nodejs:12
     - npm install -g yarn
-    - wget -O- "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" | tar xvjf /usr/local/
-    - echo "exclude=firefox" >> /etc/dnf/dnf.conf
-    - ln -s /usr/local/firefox/firefox /usr/bin/firefox
-
+    - dnf -y install snapd
+    - systemctl enable --now snapd.socket
+    - ln -s /var/lib/snapd/snap /snap
+    - snap install firefox
   script:
     - yarn install
     - yarn testcafe firefox:headless tests/sampleTest.js -e
