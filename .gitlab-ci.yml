@@ -1,16 +1,28 @@
 testcafe_tests:
   stage: test
-  image: centos
+  image: almalinux:8.6-20220512
   before_script:
-    - dnf -y install wget zip jq
-    - dnf -y module install nodejs:12
+    # Install dependencies
+    - dnf -y install wget zip jq openssl procps epel-release python3
+    - dnf -y groupinstall "Development Tools"
+    # Install Chrome
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    - dnf -y install google-chrome-stable_current_x86_64.rpm
+    # install node 16.17.1
+    - curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+    - nvm install 16.17.1
+    - nvm alias default 16.17.1
+    - nvm use default
+
+    # install latest versions of npm and node-gyp
+    - npm install -g npm
+    - npm install -g node-gyp
+
+    # Install yarn
     - npm install -g yarn
-    - yum -y install epel-release 
-    - yum -y install firefox 
-    - yum -y update firefox
   script:
     - yarn install
-    - yarn testcafe firefox:headless tests/sampleTest.js -e
+    - yarn testcafe chrome:headless tests/sampleTest.ts -e
   artifacts:
     paths:
       - tests/results
