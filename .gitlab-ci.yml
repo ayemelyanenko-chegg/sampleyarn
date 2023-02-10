@@ -9,9 +9,10 @@ testcafe_tests:
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
     - dnf -y install google-chrome-stable_current_x86_64.rpm
     # install node 16.17.1
-    - curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
-    - nvm install 16.17.1
-    - nvm alias default 16.17.1
+    - curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash - && \
+    - source /root/.nvm/nvm.sh && \
+    - nvm install 16.17.1 && \
+    - nvm alias default 16.17.1 && \
     - nvm use default
 
     # install latest versions of npm and node-gyp
