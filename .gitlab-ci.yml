@@ -23,9 +23,10 @@ testcafe_tests:
     - npm install -g yarn
   script:
     - yarn install
-    - yarn testcafe chrome:headless tests/sampleTest.ts -e
+    - yarn testcafe chrome:headless tests/sampleTest.ts -e --experimental-proxyless
   artifacts:
     paths:
-      - tests/results
-    reports:
-      junit: tests/results/report.xml
+      - tests/screenshots/*
+      - tests/reports/*
+    when: on_failure
+    expire_in: 5 days
