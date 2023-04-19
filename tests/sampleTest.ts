@@ -246,3 +246,127 @@ test('My first test', async t => {
         .typeText('#developer-name', 'John Smith')
         .click('#submit-button');
 });
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
+
+test('My first test', async t => {
+    await t
+        .typeText('#developer-name', 'John Smith')
+        .click('#submit-button');
+});
