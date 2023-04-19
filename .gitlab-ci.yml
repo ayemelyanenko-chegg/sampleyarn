@@ -1,4 +1,7 @@
 testcafe_tests:
+  variables:
+    KUBERNETES_CPU_REQUEST: 3
+    KUBERNETES_MEMORY_REQUEST: 6Gi
   stage: test
   image: almalinux:8.6-20220512
   before_script:
