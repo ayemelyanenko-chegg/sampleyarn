@@ -1,5 +1,4 @@
 /node_modules
 .npmrc
 .idea/
-tests/screenshots/
-tests/reports/
+screenshots/

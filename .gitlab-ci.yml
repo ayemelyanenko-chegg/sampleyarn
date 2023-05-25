@@ -26,7 +26,6 @@ testcafe_tests:
     - yarn testcafe chrome:headless tests/sampleTest.ts -e
   artifacts:
     paths:
-      - tests/screenshots/*
-      - tests/reports/*
+      - sampleyarn/tests/screenshots/*
     when: on_failure
     expire_in: 5 days

@@ -16,7 +16,8 @@ async function userLogInWithCredentials(
   await t
     .typeText(emailForSignIn, email, { paste: true })
     .typeText(passForSignin, password, { paste: true })
-    .click(signInButton);
+    .click(signInButton)
+    .wait(6000);
   // Redirect would happen here
   console.log(`Logged in as user: ${email}`);
   await t.expect(title.exists).notOk();
