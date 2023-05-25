@@ -23,7 +23,7 @@ testcafe_tests:
     - npm install -g yarn
   script:
     - yarn install
-    - yarn testcafe chrome:headless tests/sampleTest.ts -e -c 10 --native-automation
+    - yarn testcafe chrome:headless tests/sampleTest.ts -e
   artifacts:
     paths:
       - tests/screenshots/*
