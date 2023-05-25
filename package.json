@@ -6,7 +6,8 @@
   "author": "ayem22",
   "license": "MIT",
   "dependencies": {
-    "testcafe": "2.5.0",
+    "@testing-library/testcafe": "^5.0.0",
+    "testcafe": "^2.6.0",
     "typescript": "4.5.5"
   }
 }
