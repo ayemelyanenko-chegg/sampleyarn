@@ -2,18 +2,10 @@ testcafe_tests:
   stage: test
   image: node:18.16.0-bullseye-slim
   before_script:
-    # Install dependencies
-    - dnf -y install wget zip jq openssl procps epel-release python3
-    - dnf -y groupinstall "Development Tools"
-    # Install Chrome
-    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-    - dnf -y install google-chrome-stable_current_x86_64.rpm
-    # install node 16.17.1
-    - curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash - && \
-    - source /root/.nvm/nvm.sh && \
-    - nvm install 18.16.0 && \
-    - nvm alias default 18.16.0 && \
-    - nvm use default
+    # Install required packages and tools
+    - apt-get update && \
+    - apt-get install --no-install-recommends -y \
+      yarn \
 
     # install latest versions of npm and node-gyp
     - npm install -g npm
