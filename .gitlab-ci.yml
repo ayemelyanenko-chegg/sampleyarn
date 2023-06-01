@@ -3,9 +3,8 @@ testcafe_tests:
   image: node:18.16.0-bullseye-slim
   before_script:
     # Install required packages and tools
-    - apt-get update && \
-    - apt-get install --no-install-recommends -y \
-      yarn \
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn
 
     # install latest versions of npm and node-gyp
     - npm install -g npm
