@@ -1,6 +1,6 @@
 testcafe_tests:
   stage: test
-  image: bullseye-slim
+  image: node:18.16.0-bullseye-slim
   before_script:
     # Install dependencies
     - dnf -y install wget zip jq openssl procps epel-release python3
