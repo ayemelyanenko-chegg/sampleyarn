@@ -1,6 +1,6 @@
 testcafe_tests:
   stage: test
-  image: almalinux:8.6-20220512
+  image: bullseye-slim
   before_script:
     # Install dependencies
     - dnf -y install wget zip jq openssl procps epel-release python3
@@ -23,7 +23,7 @@ testcafe_tests:
     - npm install -g yarn
   script:
     - yarn install
-    - yarn testcafe chrome:headless tests/sampleTest.ts -e
+    - yarn testcafe chrome:headless tests/sampleTest.ts -e -c 10
   artifacts:
     paths:
       - $CI_PROJECT_DIR
