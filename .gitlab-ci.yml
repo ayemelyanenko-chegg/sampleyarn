@@ -15,7 +15,7 @@ testcafe_tests:
     - apt-get install -y google-chrome-stable
   script:
     - yarn install
-    - yarn testcafe chrome:headless tests/sampleTest.ts -e -c 10
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
   artifacts:
     paths:
       - $CI_PROJECT_DIR
