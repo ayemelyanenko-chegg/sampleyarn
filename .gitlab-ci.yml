@@ -8,7 +8,7 @@ testcafe_tests:
     # install latest versions of npm and node-gyp and chrome
     - npm install -g npm
     - npm install -g node-gyp
-    - wget --no-check-certificate -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-archive-keyring.gpg
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-archive-keyring.gpg
     - echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-archive-keyring.gpg] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
     - apt-get update
     - apt-get install --no-install-recommends -y google-chrome-stable
