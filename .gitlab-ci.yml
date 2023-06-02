@@ -21,3 +21,219 @@ testcafe_tests:
       - $CI_PROJECT_DIR
     when: on_failure
     expire_in: 5 days
+
+testcafe_tests_2:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_3:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_4:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_5:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_6:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_7:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_8:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_9:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
+
+testcafe_tests_10:
+  stage: test
+  image: node:18.16.0-bullseye-slim
+  before_script:
+    # Install required packages and tools
+    - apt-get update
+    - apt-get install --no-install-recommends -y yarn wget gpg gpg-agent sudo
+    # install latest versions of npm and node-gyp and chrome
+    - npm install -g npm
+    - npm install -g node-gyp
+    - wget --no-check-certificate -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update
+    - apt-get install ca-certificates dialog apt-utils -y
+    - apt-get install -y google-chrome-stable
+  script:
+    - yarn install
+    - yarn testcafe 'chrome:headless --no-sandbox --disable-dev-shm-usage' tests/sampleTest.ts -e -c 10
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR
+    when: on_failure
+    expire_in: 5 days
